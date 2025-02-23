@@ -1,0 +1,33 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2017",
+    "module": "es2020",
+    "lib": [
+      "es2020", // Cambia "es2018" a "es2020" para mayor compatibilidad
+      "dom"
+    ],
+    "skipLibCheck": true, // Ignora la verificación de tipos en archivos de declaración
+    "esModuleInterop": true, // Permite la interoperabilidad entre CommonJS y ES Modules
+    "resolveJsonModule": true // Permite importar archivos JSON
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true,
+    "fullTemplateTypeCheck": true // Habilita la verificación completa de tipos en plantillas
+  }
+}
