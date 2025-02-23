@@ -1,0 +1,216 @@
+/* Estilos globales */
+.container {
+    background-color: #0d0d0d;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+  }
+  
+  /* Barra de búsqueda */
+  .search-bar {
+    display: flex;
+    width: 50%;
+    background: #1a1a1a;
+    border-radius: 8px;
+    padding: 8px;
+    align-items: center;
+  
+    input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      color: #fff;
+      padding: 8px;
+      outline: none;
+    }
+  
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+      color: #fff;
+    }
+  }
+  
+  .search-bar input {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border-radius: 6px;
+    background: #262626;
+    color: #fff;
+    outline: none;
+  }
+  
+  /* Lista de ítems */
+  .item-list {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 20px;
+  }
+  
+  .item-card,
+  .item {
+    display: flex;
+    align-items: center;
+    background: #1a1a1a;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 10px;
+    position: relative;
+    color: #fff;
+    transition: 0.3s;
+  }
+  
+  .item-card {
+    padding: 15px;
+  }
+  
+  .item:hover {
+    background: #333;
+  }
+  
+  .item-card .item-content {
+    flex: 1;
+    margin-left: 12px;
+  }
+  
+  .item-card .item-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .item-card .item-icon {
+    width: 32px;
+    height: 32px;
+    background: gray;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .item-card h2 {
+    flex: 1;
+    font-size: 18px;
+  }
+  
+  .item-card .tag {
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .item-card p {
+    font-size: 14px;
+    margin: 5px 0;
+    opacity: 0.8;
+  }
+  
+  .item-card .date-info {
+    font-size: 12px;
+    opacity: 0.6;
+  }
+  
+  .item .item-info {
+    flex-grow: 1;
+  }
+  
+  .item .category {
+    background: #ff4444;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+  
+  /* Barra de estado */
+  .status-bar {
+    width: 4px;
+    background: #00ff00;
+    border-radius: 4px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  /* Botones */
+  .delete-btn,
+  .clear-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .delete-btn {
+    font-size: 18px;
+    color: #ccc;
+  }
+  
+  .clear-btn {
+    background: #00ff00;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 6px;
+  }
+  
+  /* Contenedor de botones */
+  .button-container {
+    position: fixed; /* Fija los botones en la pantalla */
+    bottom: 20px; /* Distancia desde la parte inferior */
+    right: 20px; /* Distancia desde la derecha */
+    display: flex;
+    flex-direction: column-reverse; /* Coloca el botón S encima del botón + */
+    gap: 10px; /* Espacio entre los botones */
+  }
+  
+  /* Estilos comunes para los botones */
+  .add-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Estilo específico para el botón S */
+  .s-btn {
+    background-color: #28a745; /* Color verde para diferenciarlo */
+  }
+  
+  /* Estilo específico para el botón + */
+  .plus-btn {
+    background-color: #007bff; /* Color azul */
+  }
+  
+  /* Estilos dinámicos de etiquetas */
+  .tag.BackEnd {
+    background: #4b6584;
+  }
+  
+  .tag.FrontEnd {
+    background: #eb3b5a;
+  }
+  
+  /* Botón para deseleccionar y mostrar en consola */
+  .clear-btn {
+    margin-top: 10px;
+  }
+  
+  /* Estilo del ítem */
+  .item input[type="checkbox"] {
+    margin-right: 15px;
+    transform: scale(1.3);
+  }

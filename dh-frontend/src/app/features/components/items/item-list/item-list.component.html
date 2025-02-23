@@ -1,0 +1,54 @@
+<div class="container">
+  <!-- Barra de búsqueda -->
+  <div class="search-bar">
+    <input type="text" placeholder="Search..." [(ngModel)]="searchText" />
+    <button>🔍</button>
+  </div>
+
+  <!-- Lista de ítems -->
+  <div class="item-list">
+    <div class="item-card" *ngFor="let item of filteredItems; let i = index">
+        <input
+        type="checkbox"
+        [checked]="isItemChecked(i)"
+        (change)="onCheckboxChange(i, $event)"
+      />
+      <div class="item-card" (click)="openModal(item)">
+      <div class="status-bar"></div>
+      <div class="item-content">
+        <div class="item-header">
+<!--           <div class="item-icon"></div>
+ -->          <h2>{{ item.title }}</h2>
+          <span class="tag" [ngClass]="getTagClass(item.status)">{{
+            item.status
+          }}</span>
+        </div>
+        <p>{{ item.description }}</p>
+        <span class="date-info">
+          {{ item.update_date ? "Updated" : "Created" }} :
+          {{ item.update_date | date : "dd/MM/yyyy" }}
+        </span>        
+      </div>
+      <button class="delete-btn" (click)="deleteItem(item.id)">✖</button>
+    </div>
+    </div>
+  </div>
+
+  <div class="button-container">
+    <button
+      *ngIf="hasSelectedItems"
+      (click)="printSelectedItems()"
+      class="add-btn s-btn"
+    >
+      S
+    </button>
+    <!-- Botón de agregar -->
+    <button (click)="openModal()" class="add-btn plus-btn">+</button>
+  </div>
+</div>
+
+<app-item-modal
+  *ngIf="isModalOpen"
+  (closeModal)="closeModal()"
+  (itemUpdated)="updateItem($event)"
+></app-item-modal>
